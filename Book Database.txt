@@ -1,0 +1,87 @@
+
+use admin
+db.book.insert({
+  "_id" : "01", 
+    "category" : "Novel",
+    "title" : "IT chapter 1", 
+    "publisherID" : "PUB15010", 
+    "author" : {authorFName: "Stephen", authorLName: "King"}, 
+    "published" : "17 July 2015", 
+    "format" : "E-book", 
+    "pages" : 345, 
+    "price" : 25, 
+    "comment" : [
+        "It freaks me out - LB", 
+        "Interesting, twist plot"
+    ]
+})
+
+
+use admin
+db.book.insert({
+  "_id" : "02", 
+    "category" : "Novel",
+    "title" : "System design and analysis", 
+    "publisherID" : "PUB15010", 
+    "author" : {authorFName: "Robert", authorLName: "Jackson"}, 
+    "published" : "27 Aug 2015", 
+    "format" : "Hard cover", 
+    "pages" : 560, 
+    "price" : 230, 
+    "comment" : [
+        "amazing"
+    ]
+})
+
+use admin
+db.book.insert({
+  "_id" : "03", 
+    "category" : "Novel",
+    "title" : "Me before you", 
+    "publisherID" : "PUB07018", 
+    "author" : {authorFName: "Jojo", authorLName: "Moyes"}, 
+    "published" : "21 Jan 2016", 
+    "format" : "a", 
+    "pages" : 254, 
+    "price" : 45, 
+    "comment" : [
+        "Lovely and gentle, every word is the music note of the stunning song"
+    ]
+})
+
+use admin
+db.book.insert({
+  "_id" : "04", 
+    "category" : "IT",
+    "title" : "Database for dummies", 
+    "publisherID" : "PUB27062", 
+    "author" : {authorFName: "Robert", authorLName: "Jackson"}, 
+    "published" : "05 Feb 2015", 
+    "format" : "Hard cover", 
+    "pages" : 427, 
+    "price" : 154, 
+    "comment" : [
+        "Easy to learn and follow with simple words and basic level"
+    ]
+})
+
+
+use admin
+db.book.insert({ 
+    "_id" : "05", 
+    "category" : "IT", 
+    "title" : "Advance Java in industry world", 
+    "publisherID" : "PUB27062", 
+    "author" : {
+        "authorFName" : "Robert", 
+        "authorLName" : "Jackson"
+    }, 
+    "published" : "22 Nov 2008", 
+    "format" : "Hard cover", 
+    "pages" : 369.0, 
+    "price" : 178.0, 
+    "comment" : [
+        "n/a"
+    ]
+})
+

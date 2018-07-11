@@ -1,0 +1,49 @@
+/Q1----------------
+
+db.book.find({},{title:1, price:1})
+
+/Q2----------------
+
+db.book.find( { price: { $gt: 100.0 } } )
+
+/Q3---------------
+use admin
+db.book.insert({ 
+    "_id" : "06", 
+    "category" : "Novel", 
+    "title" : "Explosion art", 
+    "publisherID" : "PUB15010", 
+    "author" : {
+        "authorFName" : "Sana", 
+        "authorLName" : "Huynh"
+    }, 
+    "published" : "20 Mar 2004", 
+    "format" : "Hard cover", 
+    "pages" : 219.0, 
+    "price" : 172.0, 
+    "comment" : [
+        "n/a"
+    ]
+})
+
+/Q4-----------------
+
+db.book.find( {category:'Novel'} )
+
+/Q5-------------------
+db.book.find({},{author:1}).sort({"author.authorLName":1})
+
+/Q6--------------------------------
+
+db.book.find({ "title": /.*p.*/i }, {"title": 1, "category": 1, "format": 1, "publisherID": 1})
+ 
+/Q7--------------
+
+db.book.find().sort({price:-1}).limit(1)
+
+try {
+   db.book.deleteOne( { "_id" : "02" } );
+} catch (e) {
+   print(e);
+}
+
